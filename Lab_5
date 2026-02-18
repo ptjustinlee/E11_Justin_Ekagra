@@ -71,7 +71,7 @@ while Time_ < 300:
     except RuntimeError:
         print("Unable to read from sensor, retrying...")
         continue
-    csvwriter.writerow([time.ctime(), aqdata["pm10 standard"], aqdata["pm25 standard"], aqdata["pm100 standard"], aqdata["pm10 env"], aqdata["pm25 env"], aqdata["pm100 env"], aqdata["particles 03um"], aqdata["particles 05um"], aqdata["particles 10um"], aqdata["particles 25um"], aqdata["particles 50um"], aqdata["particles 100um"], bme680.temperaturem, bme680.gas, bme680.relative_humidity, bme680.pressure, bme680.altitude])  
+    csvwriter.writerow([time.ctime(), aqdata["pm10 standard"], aqdata["pm25 standard"], aqdata["pm100 standard"], aqdata["pm10 env"], aqdata["pm25 env"], aqdata["pm100 env"], aqdata["particles 03um"], aqdata["particles 05um"], aqdata["particles 10um"], aqdata["particles 25um"], aqdata["particles 50um"], aqdata["particles 100um"], bme680.temperature, bme680.gas, bme680.relative_humidity, bme680.pressure, bme680.altitude])  
 
     timestamp = datetime.datetime.now()
     print(f"Time Stamp: {timestamp}")
